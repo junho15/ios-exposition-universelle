@@ -17,6 +17,7 @@ final class ExpositionViewController: UIViewController {
     @IBOutlet private weak var posterImage: UIImageView! {
         didSet {
             posterImage.image = UIImage(named: "poster")
+            posterImage.layer.cornerRadius = 25
         }
     }
     
