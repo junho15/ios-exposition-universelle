@@ -8,20 +8,48 @@ import UIKit
 
 final class ExpositionViewController: UIViewController {
     
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var posterImage: UIImageView!
-    @IBOutlet private weak var visitorsLabel: UILabel!
-    @IBOutlet private weak var locationLabel: UILabel!
-    @IBOutlet private weak var durationLabel: UILabel!
-    @IBOutlet private weak var descriptionTextView: UITextView!
+    @IBOutlet private weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.text = self.exposition?.title
+        }
+    }
+    
+    @IBOutlet private weak var posterImage: UIImageView! {
+        didSet {
+            posterImage.image = UIImage(named: "poster")
+        }
+    }
+    
+    @IBOutlet private weak var visitorsLabel: UILabel! {
+        didSet {
+            visitorsLabel.text = self.exposition?.visitorsDescription
+        }
+    }
+    
+    @IBOutlet private weak var locationLabel: UILabel! {
+        didSet {
+            locationLabel.text = self.exposition?.location
+        }
+    }
+    
+    @IBOutlet private weak var durationLabel: UILabel! {
+        didSet {
+            durationLabel.text = self.exposition?.duration
+        }
+    }
+    
+    @IBOutlet private weak var descriptionTextView: UITextView! {
+        didSet {
+            descriptionTextView.text = self.exposition?.description
+        }
+    }
     
     private var exposition: Exposition?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func awakeFromNib() {
+        super.awakeFromNib()
         
         configureExpositionFromJSON(name: "exposition_universelle_1900")
-        configureExpositionViews(exposition)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,15 +61,6 @@ final class ExpositionViewController: UIViewController {
     private func configureExpositionFromJSON(name: String) {
         guard let exposition = JSONDecoder().decode(from: name, to: exposition) else { return }
         self.exposition = exposition
-    }
-    
-    private func configureExpositionViews(_ exposition: Exposition?) {
-        titleLabel.text = exposition?.title
-        posterImage.image = UIImage(named: "poster")
-        visitorsLabel.text = exposition?.visitorsDescription
-        locationLabel.text = exposition?.location
-        durationLabel.text = exposition?.duration
-        descriptionTextView.text = exposition?.description
     }
     
 }
