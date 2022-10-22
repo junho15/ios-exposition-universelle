@@ -23,19 +23,19 @@ final class ExpositionViewController: UIViewController {
     
     @IBOutlet private weak var visitorsLabel: UILabel! {
         didSet {
-            visitorsLabel.text = self.exposition?.visitorsDescription
+            visitorsLabel.attributedText = self.exposition?.visitorsDescription.addAttributed(prefix: "방문객 : ")
         }
     }
     
     @IBOutlet private weak var locationLabel: UILabel! {
         didSet {
-            locationLabel.text = self.exposition?.location
+            locationLabel.attributedText = self.exposition?.location.addAttributed(prefix: "개최지 : ")
         }
     }
     
     @IBOutlet private weak var durationLabel: UILabel! {
         didSet {
-            durationLabel.text = self.exposition?.duration
+            durationLabel.attributedText = self.exposition?.duration.addAttributed(prefix: "개최 기간 : ")
         }
     }
     
