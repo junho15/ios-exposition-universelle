@@ -5,7 +5,7 @@
 //  Created by Jeremy, 준호 on 2022/10/18.
 //
 
-struct Exposition: Decodable {
+struct Exposition: Decodable, Decoder {
     let title: String
     let visitors: Int
     let location: String

@@ -12,12 +12,6 @@ final class ExpoEntriesListViewController: UIViewController {
     @IBOutlet private weak var expoEntriesListTableView: UITableView!
     private var manager: ExpoEntriesManager = ExpoEntriesManager()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        manager.configureExpoEntriesFromJSON()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
