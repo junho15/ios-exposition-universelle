@@ -13,8 +13,8 @@ struct ExpositionManager: Manager {
     var exposition: Exposition?
     
     init() {
-        exposition = configureFromJson(assetName: assetName, type: exposition)
-        image = makeImage(name: "poster")
+        self.exposition = configureFromJson(assetName: assetName, type: exposition)
+        self.image = makeImage(name: "poster")
     }
     
     var formattedVisitorsDescription: String? {

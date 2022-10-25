@@ -20,7 +20,6 @@ final class ExpositionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         configureViewsByManager()
     }
     
@@ -32,7 +31,7 @@ final class ExpositionViewController: UIViewController {
     
     private func configureViewsByManager() {
         titleLabel.text = expositionManager.exposition?.title
-        posterImage.image = expositionManager.posterImage
+        posterImage.image = expositionManager.image
         visitorsLabel.text = expositionManager.formattedVisitorsDescription
         locationLabel.text = expositionManager.exposition?.location
         durationLabel.text = expositionManager.exposition?.duration
