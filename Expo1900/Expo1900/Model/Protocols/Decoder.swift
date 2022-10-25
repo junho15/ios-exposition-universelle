@@ -10,6 +10,7 @@ import UIKit.NSDataAsset
 protocol Decoder { }
 
 extension Decoder {
+    
     func configureFromJson<T: Decodable>(assetName: String, type: T?) -> T? {
         guard let dataAsset: NSDataAsset = NSDataAsset(name: assetName) else { return nil }
         let jsonDecoder: JSONDecoder = JSONDecoder ()

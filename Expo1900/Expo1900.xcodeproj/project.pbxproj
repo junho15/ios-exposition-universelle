@@ -18,11 +18,12 @@
 		DF7B326E290689EA00740242 /* ExpoEntriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B326D290689EA00740242 /* ExpoEntriesManager.swift */; };
 		DF7B327229069DC300740242 /* ExpoEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B327129069DC300740242 /* ExpoEntryCell.swift */; };
 		DF7D0AF72907E21B006CCA82 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7D0AF62907E21B006CCA82 /* Decoder.swift */; };
+		DF7D0AF92907EBDC006CCA82 /* ImageMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7D0AF82907EBDC006CCA82 /* ImageMaker.swift */; };
 		DF96F01C290237B8001B182A /* JSONDecoder+decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF96F01B290237B8001B182A /* JSONDecoder+decode.swift */; };
 		EB0F8D2D29015BB700E2FCAE /* ExpoEntriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F8D2C29015BB700E2FCAE /* ExpoEntriesListViewController.swift */; };
 		EB0F8D2F2901769500E2FCAE /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F8D2E2901769500E2FCAE /* EntryDetailViewController.swift */; };
 		EB71ABFF28FE3ABF001AE1B1 /* ExpoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB71ABFE28FE3ABE001AE1B1 /* ExpoEntry.swift */; };
-		EBCF7EE62907813C00996BB3 /* ExpoEntryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCF7EE52907813C00996BB3 /* ExpoEntryData.swift */; };
+		EBCF7EE62907813C00996BB3 /* CustomTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCF7EE52907813C00996BB3 /* CustomTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,11 +40,12 @@
 		DF7B326D290689EA00740242 /* ExpoEntriesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoEntriesManager.swift; sourceTree = "<group>"; };
 		DF7B327129069DC300740242 /* ExpoEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoEntryCell.swift; sourceTree = "<group>"; };
 		DF7D0AF62907E21B006CCA82 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		DF7D0AF82907EBDC006CCA82 /* ImageMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMaker.swift; sourceTree = "<group>"; };
 		DF96F01B290237B8001B182A /* JSONDecoder+decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+decode.swift"; sourceTree = "<group>"; };
 		EB0F8D2C29015BB700E2FCAE /* ExpoEntriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoEntriesListViewController.swift; sourceTree = "<group>"; };
 		EB0F8D2E2901769500E2FCAE /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 		EB71ABFE28FE3ABE001AE1B1 /* ExpoEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoEntry.swift; sourceTree = "<group>"; };
-		EBCF7EE52907813C00996BB3 /* ExpoEntryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoEntryData.swift; sourceTree = "<group>"; };
+		EBCF7EE52907813C00996BB3 /* CustomTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				DF7D0AF62907E21B006CCA82 /* Decoder.swift */,
+				DF7D0AF82907EBDC006CCA82 /* ImageMaker.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -101,7 +104,7 @@
 				EB71ABFE28FE3ABE001AE1B1 /* ExpoEntry.swift */,
 				DF7B326B290630B400740242 /* ExpositionManager.swift */,
 				DF7B326D290689EA00740242 /* ExpoEntriesManager.swift */,
-				EBCF7EE52907813C00996BB3 /* ExpoEntryData.swift */,
+				EBCF7EE52907813C00996BB3 /* CustomTypes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,13 +210,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF7D0AF92907EBDC006CCA82 /* ImageMaker.swift in Sources */,
 				EB71ABFF28FE3ABF001AE1B1 /* ExpoEntry.swift in Sources */,
 				EB0F8D2D29015BB700E2FCAE /* ExpoEntriesListViewController.swift in Sources */,
 				DF7B326E290689EA00740242 /* ExpoEntriesManager.swift in Sources */,
 				DF7B327229069DC300740242 /* ExpoEntryCell.swift in Sources */,
 				DF37FD9C28FE3D9000FD8D00 /* Exposition.swift in Sources */,
 				DF7B326C290630B400740242 /* ExpositionManager.swift in Sources */,
-				EBCF7EE62907813C00996BB3 /* ExpoEntryData.swift in Sources */,
+				EBCF7EE62907813C00996BB3 /* CustomTypes.swift in Sources */,
 				EB0F8D2F2901769500E2FCAE /* EntryDetailViewController.swift in Sources */,
 				DF96F01C290237B8001B182A /* JSONDecoder+decode.swift in Sources */,
 				C79FF4B92589F401005FB0FD /* ExpositionViewController.swift in Sources */,

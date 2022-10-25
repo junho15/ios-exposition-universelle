@@ -7,7 +7,7 @@
 
 import UIKit.NSDataAsset
 
-struct ExpoEntriesManager: Decoder {
+struct ExpoEntriesManager: Manager {
     private(set) var expoEntries: [ExpoEntry]?
     private let assetName: String = "items"
     
@@ -18,10 +18,5 @@ struct ExpoEntriesManager: Decoder {
     var entriesCount: Int {
         guard let itemCount = self.expoEntries?.count else { return 0 }
         return itemCount
-    }
-    
-    func expoEntryImage(index: Int) -> UIImage? {
-        guard let imageName = expoEntries?[index].imageName else { return nil }
-        return UIImage(named: imageName)
     }
 }

@@ -7,17 +7,14 @@
 
 import UIKit.NSDataAsset
 
-struct ExpositionManager: Decoder {
+struct ExpositionManager: Manager {
     private let assetName: String = "exposition_universelle_1900"
-    private let imageName: String = "poster"
-    var exposition: Exposition?
+    private var image: UIImage?
+    private(set) exposition: Exposition?
     
     init() {
         exposition = configureFromJson(assetName: assetName, type: exposition)
-    }
-    
-    var posterImage: UIImage? {
-        return UIImage(named: imageName)
+        image = makeImage(name: "poster")
     }
     
     var formattedVisitorsDescription: String? {

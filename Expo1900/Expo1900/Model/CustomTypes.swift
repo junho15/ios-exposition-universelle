@@ -8,3 +8,4 @@
 import UIKit.UIImage
 
 typealias ExpoEntryData = (image: UIImage?, name: String, description: String)
+typealias Manager = Decoder & ImageMaker
