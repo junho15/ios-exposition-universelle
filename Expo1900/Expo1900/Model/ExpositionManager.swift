@@ -10,7 +10,7 @@ import UIKit.NSDataAsset
 struct ExpositionManager: Manager {
     private let assetName: String = "exposition_universelle_1900"
     private var image: UIImage?
-    private(set) exposition: Exposition?
+    var exposition: Exposition?
     
     init() {
         exposition = configureFromJson(assetName: assetName, type: exposition)
