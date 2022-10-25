@@ -9,14 +9,16 @@ import UIKit.NSDataAsset
 
 struct ExpositionManager: Manager {
     private let assetName: String = "exposition_universelle_1900"
-    private var image: UIImage?
+    var image: UIImage?
     var exposition: Exposition?
+//    var myString: String?
     
     init() {
-        self.exposition = configureFromJson(assetName: assetName, type: exposition)
         self.image = makeImage(name: "poster")
+        self.exposition = configureFromJson(assetName: assetName, type: exposition)
+//        self.myString = formattedString()
     }
-    
+
     var formattedVisitorsDescription: String? {
         let numberFormatter: NumberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
@@ -24,4 +26,12 @@ struct ExpositionManager: Manager {
               let visitorsDescription = numberFormatter.string(from: NSNumber(value: visitors)) else { return nil }
         return visitorsDescription + " 명"
     }
+    
+//    func formattedString() -> String? {
+//        let numberFormatter: NumberFormatter = NumberFormatter()
+//        numberFormatter.numberStyle = .decimal
+//        guard let visitors = self.exposition?.visitors,
+//              let visitorsDescription = numberFormatter.string(from: NSNumber(value: visitors)) else { return nil }
+//        return visitorsDescription + " 명"
+//    }
 }
