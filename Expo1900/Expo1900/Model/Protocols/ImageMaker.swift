@@ -14,4 +14,8 @@ extension ImageMaker {
     func makeImage(name: String) -> UIImage? {
         return UIImage(named: name)
     }
+    
+    func downloadImage(url: Data) -> UIImage? {
+        return UIImage(data: url)
+    }
 }
